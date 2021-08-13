@@ -32,7 +32,7 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-console.log(createMenuItem("Pizza", 5, "Lunch"))
+console.log(createMenuItem("Pizza", 5, "Lunch"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -104,8 +104,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 //pass array, name, rating, feedback as parameters
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push ({name:name, rating:rating, feedback:feedback})
+  return array;
   //push the object to the end of the array and return resulting array
 }
 
@@ -122,7 +123,7 @@ Use the getReviewByIndex function below to do the following:
 
 //array, index
 function getReviewByIndex(array, number) {
-  return `${array[number].name} gave the restaurant ${array[number].rating} star reviews, and their feedback was: ${array[number].feedback"}`;
+  return `${array[number].name} gave the restaurant ${array[number].rating} star reviews, and their feedback was: ${array[number].feedback}`;
 
 //return the string "{array[index].name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
 }
@@ -142,8 +143,8 @@ Use the getLastReview function below to do the following:
 */
 
 //recieve an array as a parameter
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}` ;
 // array.length -1 will be useful here
 } 
 
